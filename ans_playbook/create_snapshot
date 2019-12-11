@@ -1,0 +1,9 @@
+---
+- name: create snapshots
+  hosts: localhost
+  tasks: 
+    - name: create snapshot
+      ec2_snapshot: 
+        instance_id: i-04c4a08caf806d807
+        region: ap-south-1
+        device_name: /dev/sda1

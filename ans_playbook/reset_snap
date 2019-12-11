@@ -1,0 +1,6 @@
+---
+- name: create snapshots
+  hosts: localhost
+  tasks:
+     - name: update snapshot attribute
+       command: aws ec2 reset-snapshot-attribute --snapshot-id snap-09ad40ab4fef0ba3e --attribute createVolumePermission

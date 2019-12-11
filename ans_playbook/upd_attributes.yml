@@ -1,0 +1,8 @@
+---
+- name: create snapshots
+  hosts: localhost
+  tasks:
+     - name: update snapshot attribute
+       command: aws ec2 modify-snapshot-attribute --snapshot-id snap-09ad40ab4fef0ba3e --attribute createVolumePermission --operation-type add --group-names all 
+
+

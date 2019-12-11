@@ -1,0 +1,10 @@
+---
+- name: delete snap
+  hosts: localhost
+  tasks: 
+    - name: delete a asnapshot
+      local_action:
+        module: ec2_snapshot
+        snapshot_id: snap-0b618044d14eed7f4
+        state: absent
+        region: ap-south-1

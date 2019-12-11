@@ -1,0 +1,14 @@
+---
+- name: status of particular snapshot
+  hosts: localhost
+  tasks:
+  - name: status of snapshot
+    ec2_snapshot_facts:
+      region: ap-south-1
+      filters:
+        snapshot-id: snap-09ad40ab4fef0ba3e
+    register: output
+  - name: saving state
+    set_fact: state="{{ output.snapshots[0].state}}"
+  - debug: 
+        var: state 
