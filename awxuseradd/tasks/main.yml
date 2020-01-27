@@ -1,0 +1,10 @@
+---
+- name: creating user
+  user:
+    name: "{{dheeraj_name}}"
+    groups: "{{dheeraj_group}}"
+    password: "{{dheeraj_password}}"
+    home: /dheeraj
+  become: true
+
+
