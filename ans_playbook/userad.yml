@@ -7,3 +7,4 @@
       path: /etc/dheeraj.txt
       owner: awx
       group: awx
+      state: touch
