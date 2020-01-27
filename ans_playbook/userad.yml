@@ -5,3 +5,5 @@
   - name: add a file
     file:
       path: /etc/dheeraj.txt
+      owner: awx
+      group: awx
