@@ -2,8 +2,7 @@
 - hosts: all
   become: true
   tasks:
-  - name: delete user
+  - name: add user
     user:
       name: awxdheeraj
-      state: absent
-      remove: yes
+      
